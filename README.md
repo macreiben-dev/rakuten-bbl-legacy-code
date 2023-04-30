@@ -1,6 +1,12 @@
 legacy-testing-kata-java
 ========================
 
+# Important
+
+- Fork du repo legacy-testing-java de cyriuxx
+
+# Description
+
 A legacy codebase that resist a bit testing.
 
 First try to run it. 
