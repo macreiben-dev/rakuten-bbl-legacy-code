@@ -16,6 +16,13 @@ public class BlogAuctionTask {
 
 	@SuppressWarnings("deprecation")
 	public void PriceAndPublish(String blog, String mode) {
+
+		// ====
+
+		System.out.println("BlogAuctionTask.PriceAndPublish - param[blog," + blog + "], param[mode, " + mode + "]");
+
+		// ====
+
 		double avgPrice = marketDataRetriever.averagePrice(blog);
 		// FIXME should actually be +2 not +1
 		double proposal = avgPrice + 1;
@@ -39,7 +46,7 @@ public class BlogAuctionTask {
 
 		// ======
 
-		System.out.println("WouldBePublished: [" + proposal + "]");
+		System.out.println("BlogAuctionTask.PriceAndPublish - toPublish[" + proposal + "]");
 		//QuotePublisher.INSTANCE.publish(proposal);
 
 		// ======
