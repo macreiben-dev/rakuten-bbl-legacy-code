@@ -36,6 +36,12 @@ public class BlogAuctionTask {
 				* timeFactor
 				* (new Date().getTime() - new Date(2000, Calendar.JANUARY, 1)
 						.getTime());
-		QuotePublisher.INSTANCE.publish(proposal);
+
+		// ======
+
+		System.out.println("WouldBePublished: [" + proposal + "]");
+		//QuotePublisher.INSTANCE.publish(proposal);
+
+		// ======
 	}
 }
