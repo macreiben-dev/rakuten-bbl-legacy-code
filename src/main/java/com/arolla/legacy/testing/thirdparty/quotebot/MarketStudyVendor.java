@@ -15,6 +15,8 @@ public class MarketStudyVendor {
             throw new RuntimeException("");
         }
 
+        System.out.println("Computing average price for: [" + blog + "]");
+
         SomeComputingThatTakesRandomTime();
 
         return ((double) blog.hashCode() * (new Random()).nextDouble());
