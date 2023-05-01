@@ -5,6 +5,9 @@ import java.util.Collection;
 public class AutomaticQuoteBot {
 
 	public void sendAllQuotes(String mode) {
+
+		System.out.println("AutomaticQuoteBot.sendAllQuotes - param[mode, " + mode + "]");
+
 		Collection<String> blogs = AdSpace.getAdSpaces();
 		for (String blog : blogs) {
 			BlogAuctionTask auctionTask = new BlogAuctionTask();
