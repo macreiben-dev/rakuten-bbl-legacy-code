@@ -17,7 +17,7 @@ public class ApplicationAllMode {
     }
 
     private static void computeForAllMode() {
-        List<String> allModes = Arrays.asList("SLOW", "MEDIUM", "FAST", "ULTRAFAST");
+        List<String> allModes = Arrays.asList("SLOW", "MEDIUM", "FAST", "ULTRAFAST", "DONT_EXIST");
 
         for (String currentMode : allModes
              ) {
