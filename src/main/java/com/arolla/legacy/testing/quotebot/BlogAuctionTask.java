@@ -46,16 +46,7 @@ public class BlogAuctionTask {
 		if (mode.equals(ULTRAFAST)) {
 			timeFactor = 13;
 		}
-
-//		if (initialAvgPrice % 2 == 0) {
-//			initialAvgPrice = 3.14 * initialAvgPrice;
-//		} else {
-//			initialAvgPrice = 3.15
-//					* timeFactor
-//					* (new Date().getTime() - new Date(2000, Calendar.JANUARY, 1)
-//					.getTime());
-//		}
-
+		
 		double priceToPublish = computeProposal(initialAvgPrice, timeFactor);
 
 		// ======
