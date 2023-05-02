@@ -41,10 +41,14 @@ public class BlogAuctionTask {
 		if (mode.equals("ULTRAFAST")) {
 			timeFactor = 13;
 		}
-		proposal = proposal % 2 == 0 ? 3.14 * proposal : 3.15
-				* timeFactor
-				* (new Date().getTime() - new Date(2000, Calendar.JANUARY, 1)
-						.getTime());
+		if (proposal % 2 == 0) {
+			proposal = 3.14 * proposal;
+		} else {
+			proposal = 3.15
+					* timeFactor
+					* (new Date().getTime() - new Date(2000, Calendar.JANUARY, 1)
+					.getTime());
+		}
 
 		// ======
 
