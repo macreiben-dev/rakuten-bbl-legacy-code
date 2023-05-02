@@ -1,6 +1,7 @@
 package com.arolla.legacy.testing.quotebot.tests;
 
 import com.arolla.legacy.testing.quotebot.Application;
+import com.arolla.legacy.testing.quotebot.ApplicationAllMode;
 import org.approvaltests.Approvals;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +20,7 @@ public class ApprovalTests {
         System.setOut(new PrintStream(outputStream));
         System.setIn(inputStream);
 
-        Application.main(new String[0]);
+        ApplicationAllMode.main(new String[0]);
 
         var actual = outputStream.toString();
 
