@@ -29,7 +29,8 @@ public class BlogAuctionTask {
 
         // ====
 
-        final double avgPrice = marketDataRetriever.averagePrice(blog);
+        final double avgPrice = getAvgPrice(blog);
+
         // FIXME should actually be +2 not +1
         final double initialAvgPrice = avgPrice + 1;
 
@@ -45,10 +46,18 @@ public class BlogAuctionTask {
 
         // ======
 
-        System.out.println("BlogAuctionTask.PriceAndPublish - toPublish[" + priceToPublish + "]");
-        //QuotePublisher.INSTANCE.publish(initialAvgPrice);
+        publishPrice(priceToPublish);
 
         // ======
+    }
+
+    protected void publishPrice(double priceToPublish) {
+        System.out.println("BlogAuctionTask.PriceAndPublish - toPublish[" + priceToPublish + "]");
+        //QuotePublisher.INSTANCE.publish(initialAvgPrice);
+    }
+
+    protected double getAvgPrice(String blog) {
+        return marketDataRetriever.averagePrice(blog);
     }
 
     private double computeProposal(double proposal, double timeFactor) {
